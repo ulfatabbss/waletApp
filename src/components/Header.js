@@ -17,6 +17,7 @@ const Header = ({navigation}) => {
           width: '70%',
           marginLeft: 10,
           flexDirection: 'row',
+          alignItems: 'center',
           justifyContent: 'space-between',
         }}>
         <TouchableOpacity>

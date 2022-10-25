@@ -37,9 +37,8 @@ const Reset = ({navigation}) => {
           placeholder={'123-456-789'}
         />
 
-        <TouchableOpacity
-          style={button}
-          onPress={() => navigation.navigate('VerifyCode')}>
+        <TouchableOpacity style={button}>
+          {/* // onPress={() => navigation.navigate('VerifyCode')} */}
           <Text style={{color: 'white', fontWeight: '600'}}>Send Code</Text>
         </TouchableOpacity>
       </View>

@@ -36,7 +36,7 @@ const Settings = ({navigation}) => {
             source={require('../aseets/settingsicon.png')}
             resizeMode={'contain'}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate()}>
+        <TouchableOpacity>
           <Image
             style={{height: 50, width: '100%'}}
             source={require('../aseets/settingsicon6.png')}

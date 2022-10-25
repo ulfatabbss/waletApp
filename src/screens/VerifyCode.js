@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {button, headingText} from '../utilis/styles';
 import Back from '../components/Back';
-import OTPInputView from '@twotalltotems/react-native-otp-input';
-
 const VerifyCode = ({navigation}) => {
   return (
     <View style={{flex: 1, width: '100%', backgroundColor: 'white'}}>

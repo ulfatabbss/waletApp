@@ -14,13 +14,13 @@ import {Data, income} from '../components/Data';
 
 const Dashboard = ({navigation}) => {
   return (
-    <ScrollView style={{flex: 1, width: '100%', backgroundColor: 'white'}}>
+    <ScrollView style={{flex: 1, width: '100%'}}>
       <Header />
       <View style={styles.card}>
         <View
           style={{
             height: '50%',
-            width: '50%',
+            width: '53%',
             marginLeft: 10,
             alignItems: 'center',
             flexDirection: 'row',
@@ -31,7 +31,7 @@ const Dashboard = ({navigation}) => {
             source={require('../aseets/photo1.jpg')}
             resizeMode={'contain'}
           />
-          <Text style={styles.nameText}> Muhammad Salim Qureshi</Text>
+          <Text style={styles.nameText}> Katherine Langford</Text>
         </View>
         <View
           style={{
@@ -217,6 +217,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     elevation: 2,
     borderBottomLeftRadius: 20,
+    backgroundColor: 'white',
     borderBottomRightRadius: 20,
     bottom: 0,
     padding: 10,
@@ -229,8 +230,12 @@ const styles = StyleSheet.create({
   nameText: {
     fontSize: 14,
     fontWeight: '600',
+    marginTop: 15,
     width: 80,
     height: 60,
+    color: 'black',
+    textAlign: 'center',
+    marginLeft: 5,
   },
   headingText: {fontWeight: '600', color: 'black'},
   incomeExpense: {
