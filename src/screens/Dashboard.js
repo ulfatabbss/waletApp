@@ -15,7 +15,7 @@ import {Data, income} from '../components/Data';
 const Dashboard = ({navigation}) => {
   return (
     <ScrollView style={{flex: 1, width: '100%', backgroundColor: 'white'}}>
-      <Header navigation={navigation} />
+      <Header />
       <View style={styles.card}>
         <View
           style={{

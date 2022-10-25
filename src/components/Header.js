@@ -19,7 +19,7 @@ const Header = ({navigation}) => {
           flexDirection: 'row',
           justifyContent: 'space-between',
         }}>
-        <TouchableOpacity onPress={() => navigation.navigate('MyDrawer')}>
+        <TouchableOpacity>
           <Image
             style={styles.icon}
             source={require('../aseets/drawer.png')}

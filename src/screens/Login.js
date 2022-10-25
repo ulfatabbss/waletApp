@@ -36,7 +36,7 @@ const Login = ({navigation}) => {
     if (email == null || password == null) {
       alert('all fields are required ');
     } else {
-      navigation.replace('Dashboard');
+      navigation.replace('Tabs');
     }
   };
   return (
@@ -56,9 +56,9 @@ const Login = ({navigation}) => {
           alignSelf: 'center',
         }}>
         <Image
-          source={require('../aseets/frame1.png')}
+          source={require('../aseets/mono.png')}
           style={{
-            height: '100%',
+            height: '60%',
             alignSelf: 'center',
             width: '100%',
           }}
@@ -75,6 +75,7 @@ const Login = ({navigation}) => {
         <TextInput
           style={textInput}
           placeholder={'example@email.com'}
+          placeholderTextColor="black"
           value={email}
           onChangeText={text => setEmail(text)}
         />
@@ -95,6 +96,7 @@ const Login = ({navigation}) => {
             value={password}
             onChangeText={text => setPassword(text)}
             secureTextEntry={passwordVisibility}
+            placeholderTextColor="black"
             style={{width: '100%', height: '100%'}}
             placeholder={'• • • • • • • • •'}
           />
@@ -129,8 +131,8 @@ const Login = ({navigation}) => {
               height: '60%',
               width: '35%',
               alignItems: 'center',
-            }}>
-            {/* // onPress={() => navigation.navigate('Reset')}> */}
+            }}
+            onPress={() => navigation.navigate('Reset')}>
             <Text
               style={{
                 fontWeight: '500',

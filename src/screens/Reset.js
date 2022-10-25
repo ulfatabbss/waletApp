@@ -5,14 +5,14 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import React from 'react';
 import {headingText, textInput, fieldText, button} from '../utilis/styles';
 import Back from '../components/Back';
-import React from 'react';
 
 const Reset = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
-      <Back navigation={navigation} />
+      {/* <Back navigation={navigation} /> */}
       <View
         style={{
           height: '80%',
@@ -32,12 +32,14 @@ const Reset = ({navigation}) => {
           Phone Number
         </Text>
         <TextInput
+          value={''}
           style={[textInput, {marginBottom: 50}]}
           placeholder={'123-456-789'}
         />
 
-        <TouchableOpacity style={[button, {}]}>
-          {/* // onPress={() => navigation.navigate('VerifyCode')}> */}
+        <TouchableOpacity
+          style={button}
+          onPress={() => navigation.navigate('VerifyCode')}>
           <Text style={{color: 'white', fontWeight: '600'}}>Send Code</Text>
         </TouchableOpacity>
       </View>

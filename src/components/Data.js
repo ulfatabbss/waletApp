@@ -37,12 +37,14 @@ const income = [
     id: 1,
     text: 'All',
     picture: require('../aseets/Vector1.png'),
+    screen: 'Expense',
   },
 
   {
     id: 2,
     text: 'Shopping',
     picture: require('../aseets/Vector2.png'),
+    screen: 'Expense',
   },
   {
     id: 3,
@@ -51,5 +53,60 @@ const income = [
     screen: 'Expense',
   },
 ];
+const history = [
+  {
+    id: 0,
+    icon: require('../aseets/arrowdown.png'),
+    color: 'green',
+    cat: 'Income',
+    amount: 'Rs.200',
+    subcat: 'Salary',
+    date: '24/10/1950',
+  },
+  {
+    id: 1,
+    icon: require('../aseets/uparrow.png'),
+    color: 'red',
+    cat: 'Expense',
+    amount: 'Rs.200',
+    subcat: 'Buy Shoes',
+    date: '24/10/1950',
+  },
+  {
+    id: 2,
+    icon: require('../aseets/arrowdown.png'),
+    color: 'green',
+    cat: 'Income',
+    amount: 'Rs.200',
+    subcat: 'Salary',
+    date: '24/10/1950',
+  },
+  {
+    id: 3,
+    icon: require('../aseets/uparrow.png'),
+    color: 'red',
+    cat: 'Expense',
+    amount: 'Rs.200',
+    subcat: 'Buy Shoes',
+    date: '24/10/1950',
+  },
+  {
+    id: 4,
+    icon: require('../aseets/arrowdown.png'),
+    color: 'green',
+    cat: 'Income',
+    amount: 'Rs.200',
+    subcat: 'Salary',
+    date: '24/10/1950',
+  },
+  {
+    id: 5,
+    icon: require('../aseets/uparrow.png'),
+    cat: 'Expense',
+    amount: 'Rs.200',
+    subcat: 'Buy Shoes',
+    date: '24/10/1950',
+  },
+];
 
-export {Data, income};
+export {Data, income, history};

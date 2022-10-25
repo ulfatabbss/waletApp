@@ -5,6 +5,7 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import React from 'react';
 import {useEffect} from 'react';
@@ -14,7 +15,7 @@ const SplashScreen = ({navigation}) => {
     setTimeout(() => {
       navigation.replace('SplashSecond');
     }, 3000);
-    // console.log('SplashScreen');
+    console.log('SplashScreen');
   });
   return (
     <ImageBackground
@@ -28,9 +29,28 @@ const SplashScreen = ({navigation}) => {
         style={{
           flex: 1,
           width: '100%',
-          alignSelf: 'center',
-          backgroundColor: 'rgba(0,0,0,0.3)',
-        }}></View>
+          justifyContent: 'flex-end',
+          // backgroundColor: 'rgba(0,0,0,0.3)',
+        }}>
+        <View
+          style={{
+            flex: 0.2,
+            height: 80,
+            width: '100%',
+            justifyContent: 'center',
+            // backgroundColor: 'red',
+          }}>
+          <Image
+            style={{
+              height: 50,
+              width: Dimensions.get('window').width - 80,
+              alignSelf: 'center',
+            }}
+            source={require('../aseets/webevis.png')}
+            resizeMode={'contain'}
+          />
+        </View>
+      </View>
     </ImageBackground>
   );
 };
