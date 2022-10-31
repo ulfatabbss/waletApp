@@ -3,38 +3,38 @@ const Data = [
     id: 1,
     text: 'All',
     picture: require('../aseets/Vector1.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
   {
     id: 2,
     text: 'Shopping',
     picture: require('../aseets/Vector2.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
   {
     id: 3,
     text: 'Traveling',
     picture: require('../aseets/Vector3.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
   {
     id: 4,
     text: 'Utility Bills',
     picture: require('../aseets/Vector4.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
 
   {
     id: 5,
     text: 'Health',
     picture: require('../aseets/Vector5.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
   {
     id: 6,
     text: 'Add More',
     picture: require('../aseets/Vector6.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
 ];
 const income = [
@@ -42,20 +42,20 @@ const income = [
     id: 1,
     text: 'All',
     picture: require('../aseets/Vector1.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
 
   {
     id: 2,
     text: 'Shopping',
     picture: require('../aseets/Vector2.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
   {
     id: 3,
     text: 'Add More',
     picture: require('../aseets/Vector6.png'),
-    screen: 'Expense',
+    screen: 'History',
   },
 ];
 const history = [
@@ -67,6 +67,7 @@ const history = [
     amount: 'Rs.200',
     subcat: 'Salary',
     date: '24/10/1950',
+    screen: 'Shopping',
   },
   {
     id: 1,
@@ -76,6 +77,7 @@ const history = [
     amount: 'Rs.200',
     subcat: 'Buy Shoes',
     date: '24/10/2022',
+    screen: 'Shopping',
   },
   {
     id: 2,
@@ -85,6 +87,7 @@ const history = [
     amount: 'Rs.200',
     subcat: 'Salary',
     date: '24/10/2022',
+    screen: 'Shopping',
   },
   {
     id: 3,
@@ -94,6 +97,7 @@ const history = [
     amount: 'Rs.200',
     subcat: 'Buy Shoes',
     date: '24/10/2022',
+    screen: 'Shopping',
   },
   {
     id: 4,
@@ -103,6 +107,7 @@ const history = [
     amount: 'Rs.200',
     subcat: 'Salary',
     date: '24/10/2022',
+    screen: 'Shopping',
   },
   {
     id: 5,
@@ -111,6 +116,45 @@ const history = [
     amount: 'Rs.200',
     subcat: 'Buy Shoes',
     date: '24/10/2022',
+    screen: 'Shopping',
+  },
+  {
+    id: 6,
+    icon: require('../aseets/arrowdown.png'),
+    color: 'green',
+    cat: 'Income',
+    amount: 'Rs.200',
+    subcat: 'Salary',
+    date: '24/10/2022',
+    screen: 'Shopping',
+  },
+  {
+    id: 7,
+    icon: require('../aseets/uparrow.png'),
+    cat: 'Expense',
+    amount: 'Rs.200',
+    subcat: 'Buy Shoes',
+    date: '24/10/2022',
+    screen: 'Shopping',
+  },
+  {
+    id: 8,
+    icon: require('../aseets/arrowdown.png'),
+    color: 'green',
+    cat: 'Income',
+    amount: 'Rs.200',
+    subcat: 'Salary',
+    date: '24/10/2022',
+    screen: 'Shopping',
+  },
+  {
+    id: 9,
+    icon: require('../aseets/uparrow.png'),
+    cat: 'Expense',
+    amount: 'Rs.200',
+    subcat: 'Buy Shoes',
+    date: '24/10/2022',
+    screen: 'Shopping',
   },
 ];
 

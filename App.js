@@ -18,6 +18,9 @@ import Settings from './src/screens/Settings';
 import EditProfile from './src/screens/EditProfile';
 import VerifyCode from './src/screens/VerifyCode';
 import CreatePassword from './src/screens/CreatePassword';
+import Shopping from './src/screens/Shopping';
+import History from './src/screens/History';
+import NewTransaction from './src/components/NewTransaction';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -137,6 +140,9 @@ const App = () => {
         <Stack.Screen name="EditProfile" component={EditProfile} />
         <Stack.Screen name="VerifyCode" component={VerifyCode} />
         <Stack.Screen name="CreatePassword" component={CreatePassword} />
+        <Stack.Screen name="Shopping" component={Shopping} />
+        <Stack.Screen name="History" component={History} />
+        <Stack.Screen name="NewTransaction" component={NewTransaction} />
       </Stack.Navigator>
     </NavigationContainer>
   );

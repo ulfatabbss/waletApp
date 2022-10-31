@@ -9,17 +9,24 @@ import {
 import React from 'react';
 import {expense} from '../components/AllExpense';
 
-const Expense = props => {
-  const {title} = props.route.params;
+const Expense = ({navigation}) => {
+  // const {title} = props.route.params;
   return (
-    <View style={{flex: 1}}>
-      <Text style={styles.headerText}>{title}</Text>
+    <View style={{flex: 1, padding: 10}}>
+      <Text style={styles.headerText}>Select Catagory</Text>
       <FlatList
         data={expense}
         numColumns={2}
         renderItem={itemData => {
           return (
-            <TouchableOpacity style={styles.cardList}>
+            <TouchableOpacity
+              style={styles.cardList}
+              onPress={() =>
+                navigation.navigate('NewTransaction', {
+                  name: itemData.item.name,
+                  cardIcons: itemData.item.cardIcons,
+                })
+              }>
               <Image
                 resizeMode="contain"
                 source={itemData.item.cardIcons}
@@ -36,7 +43,7 @@ const Expense = props => {
                   fontWeight: '400',
                   //   top: 15,
                 }}>
-                {itemData.item.list}
+                {itemData.item.name}
               </Text>
             </TouchableOpacity>
           );

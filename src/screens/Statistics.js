@@ -8,8 +8,9 @@ import {
 } from 'react-native';
 import React from 'react';
 import {history} from '../components/Data';
+import Chart from '../components/Chart';
 
-const Statistics = () => {
+const Statistics = ({navigation}) => {
   return (
     <View style={{flex: 1, width: '100%'}}>
       <View
@@ -25,7 +26,8 @@ const Statistics = () => {
           Statistics
         </Text>
       </View>
-      <FlatList
+      <Chart />
+      {/* <FlatList
         data={history}
         renderItem={itemData => {
           return (
@@ -75,7 +77,8 @@ const Statistics = () => {
                 }}>
                 {itemData.item.amount}
               </Text>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate(itemData.item.screen)}>
                 <Image
                   style={{
                     height: 20,
@@ -87,7 +90,7 @@ const Statistics = () => {
             </View>
           );
         }}
-      />
+      /> */}
     </View>
   );
 };

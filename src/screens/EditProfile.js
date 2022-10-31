@@ -29,7 +29,7 @@ const EditProfile = ({navigation}) => {
   const handleCamera = async () => {
     let options = {};
     const resultCam = await launchCamera(options);
-    console.log('camera....', resultCam.assets[0].uri);
+    // console.log('camera....', resultCam.assets[0].uri);
 
     setImg(resultCam.assets[0]?.uri);
     // console.log('item', item.uri);

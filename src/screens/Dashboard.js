@@ -11,8 +11,40 @@ import {ScrollView} from 'react-native-virtualized-view';
 import React from 'react';
 import Header from '../components/Header';
 import {Data, income} from '../components/Data';
-
 const Dashboard = ({navigation}) => {
+  const myExpense = ({item}) => {
+    return (
+      <TouchableOpacity
+        key={myExpense}
+        style={styles.cardList}
+        onPress={() =>
+          navigation.navigate(
+            item.screen,
+            // {
+            // title: 'All Expenses',  }
+          )
+        }>
+        <Image
+          resizeMode="contain"
+          source={item.picture}
+          style={{
+            width: 30,
+            height: 40,
+            alignSelf: 'center',
+          }}
+        />
+        <Text
+          style={{
+            color: 'black',
+            fontSize: 10,
+            fontWeight: '400',
+            top: 15,
+          }}>
+          {item.text}
+        </Text>
+      </TouchableOpacity>
+    );
+  };
   return (
     <ScrollView style={{flex: 1, width: '100%'}}>
       <Header />
@@ -53,21 +85,11 @@ const Dashboard = ({navigation}) => {
             marginTop: 10,
           }}>
           <View style={styles.incomeExpense}>
-            <View
-              style={{
-                height: '100%',
-                width: '60%',
-              }}>
+            <View style={styles.incomeExpenseView}>
               <Text style={styles.headingText}> Income</Text>
               <Text style={{color: 'black', left: 5}}>30,000</Text>
             </View>
-            <View
-              style={{
-                height: 40,
-                width: 30,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+            <View style={styles.arrowView}>
               <Image
                 style={{
                   height: '50%',
@@ -80,25 +102,15 @@ const Dashboard = ({navigation}) => {
             </View>
           </View>
           <View style={styles.incomeExpense}>
-            <View
-              style={{
-                height: '100%',
-                width: '60%',
-              }}>
-              <Text style={styles.headingText}> Expense</Text>
-              <Text style={{color: 'black', left: 5}}>00,000</Text>
+            <View style={styles.incomeExpenseView}>
+              <Text style={styles.headingText}>Expense</Text>
+              <Text style={{color: 'black', left: 5}}>10,000</Text>
             </View>
-            <View
-              style={{
-                height: 40,
-                width: 30,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
+            <View style={styles.arrowView}>
               <Image
                 style={{
-                  height: 20,
-                  width: 20,
+                  height: '50%',
+                  width: '70%',
                   tintColor: 'red',
                 }}
                 source={require('../aseets/uparrow.png')}
@@ -123,38 +135,10 @@ const Dashboard = ({navigation}) => {
           <Text style={{color: '#00CC52', fontWeight: '500'}}>View All</Text>
         </View>
         <FlatList
+          key={myExpense}
           data={Data}
           numColumns={2}
-          renderItem={itemData => {
-            return (
-              <TouchableOpacity
-                style={styles.cardList}
-                onPress={() =>
-                  navigation.navigate(itemData.item.screen, {
-                    title: 'All Expenses',
-                  })
-                }>
-                <Image
-                  resizeMode="contain"
-                  source={itemData.item.picture}
-                  style={{
-                    width: 30,
-                    height: 40,
-                    alignSelf: 'center',
-                  }}
-                />
-                <Text
-                  style={{
-                    color: 'black',
-                    fontSize: 10,
-                    fontWeight: '400',
-                    top: 15,
-                  }}>
-                  {itemData.item.text}
-                </Text>
-              </TouchableOpacity>
-            );
-          }}
+          renderItem={myExpense}
         />
       </View>
       <View
@@ -227,6 +211,12 @@ const styles = StyleSheet.create({
     width: 80,
     borderRadius: 50,
   },
+  arrowView: {
+    height: 40,
+    width: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   nameText: {
     fontSize: 14,
     fontWeight: '600',
@@ -239,10 +229,17 @@ const styles = StyleSheet.create({
   },
   headingText: {fontWeight: '600', color: 'black'},
   incomeExpense: {
-    height: 50,
+    height: 40,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 95,
     margin: 10,
     flexDirection: 'row',
+  },
+  incomeExpenseView: {
+    height: '100%',
+    width: '60%',
   },
   cardList: {
     height: 100,
